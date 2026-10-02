@@ -1,0 +1,32 @@
+{
+  "name": "potato-rotato",
+  "productName": "Potato Rotato",
+  "version": "1.4.0",
+  "description": "Adoptez et prenez soin de votre patate virtuelle!",
+  "author": "Potato Rotato",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.potatorotato.app",
+    "productName": "Potato Rotato",
+    "directories": { "output": "dist" },
+    "files": [
+      "main.js",
+      "index.html",
+      "*.css",
+      "*.svg",
+      "*.png",
+      "assets/**/*",
+      "sounds/**/*"
+    ],
+    "win": { "target": "portable" },
+    "portable": { "artifactName": "PotatoRotato-${version}.exe" }
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0"
+  }
+}
